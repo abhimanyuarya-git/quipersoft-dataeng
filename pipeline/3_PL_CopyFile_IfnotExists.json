@@ -1,6 +1,7 @@
 {
 	"name": "3_PL_CopyFile_IfnotExists",
 	"properties": {
+		"description": "This pipeline objective is to check if the file is present or not , and if not present proceed with copy operation",
 		"activities": [
 			{
 				"name": "Check File Existence",
