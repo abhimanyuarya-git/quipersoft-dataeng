@@ -1,0 +1,27 @@
+{
+	"name": "DS_adls2_innovantracrm_de_target",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_adls2_innovantracrm_storage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "quipersoft_Copy_data_task"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "target",
+				"fileSystem": "dataengineering"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

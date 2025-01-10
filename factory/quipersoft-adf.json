@@ -1,0 +1,9 @@
+{
+	"name": "quipersoft-adf",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a09b97ae-1377-4600-a0a0-019521d6d517",
+		"tenantId": "ff7d1b0f-e228-4f90-9981-82b79cba0020"
+	}
+}

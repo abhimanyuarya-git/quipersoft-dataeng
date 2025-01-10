@@ -1,0 +1,17 @@
+{
+	"name": "LS_SQLDB_quipersoft_source",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "quipersoftsqlserver.database.windows.net",
+			"database": "quipersoft-sqldatabase",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sqladmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEU1Qzg4RDdDLThBNTctNEU3Qi05NjEyLUNGRDA3NzQyNjAyN19kZmU0NTJkOC1mNDk0LTQ5ZTYtOTY2ZC1mMzg3ZTU5ODdhZDciDQp9"
+		}
+	}
+}
