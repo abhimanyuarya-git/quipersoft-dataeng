@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "quipersoft-adf"
+		},
+		"LS_ADB_quipersoft_workspace_accessToken": {
+			"value": ""
+		},
+		"LS_SQLDB_quipersoft_source_password": {
+			"value": ""
+		},
+		"LS_SQLDB_quipersoftdb_target_password": {
+			"value": ""
+		},
+		"LS_adls2_innovantracrm_storage_accountKey": {
+			"value": ""
+		},
+		"LS_ADB_quipersoft_workspace_properties_typeProperties_existingClusterId": {
+			"value": "1223-134422-roestuqn"
+		},
+		"LS_SQLDB_quipersoft_source_properties_typeProperties_server": {
+			"value": "quipersoftsqlserver.database.windows.net"
+		},
+		"LS_SQLDB_quipersoft_source_properties_typeProperties_database": {
+			"value": "quipersoft-sqldatabase"
+		},
+		"LS_SQLDB_quipersoft_source_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"LS_SQLDB_quipersoftdb_target_properties_typeProperties_server": {
+			"value": "quipersoft-targetdbserver.database.windows.net"
+		},
+		"LS_SQLDB_quipersoftdb_target_properties_typeProperties_database": {
+			"value": "quipersoft-targetsqldb"
+		},
+		"LS_SQLDB_quipersoftdb_target_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"LS_adls2_innovantracrm_storage_properties_typeProperties_url": {
+			"value": "https://innovantracrm.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

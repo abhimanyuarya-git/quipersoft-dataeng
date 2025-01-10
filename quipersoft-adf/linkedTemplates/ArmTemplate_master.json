@@ -1,0 +1,146 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "quipersoft-adf"
+		},
+		"LS_ADB_quipersoft_workspace_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'LS_ADB_quipersoft_workspace'"
+		},
+		"LS_SQLDB_quipersoft_source_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLDB_quipersoft_source'"
+		},
+		"LS_SQLDB_quipersoftdb_target_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLDB_quipersoftdb_target'"
+		},
+		"LS_adls2_innovantracrm_storage_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_adls2_innovantracrm_storage'"
+		},
+		"LS_ADB_quipersoft_workspace_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1223-134422-roestuqn"
+		},
+		"LS_SQLDB_quipersoft_source_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "quipersoftsqlserver.database.windows.net"
+		},
+		"LS_SQLDB_quipersoft_source_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "quipersoft-sqldatabase"
+		},
+		"LS_SQLDB_quipersoft_source_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		},
+		"LS_SQLDB_quipersoftdb_target_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "quipersoft-targetdbserver.database.windows.net"
+		},
+		"LS_SQLDB_quipersoftdb_target_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "quipersoft-targetsqldb"
+		},
+		"LS_SQLDB_quipersoftdb_target_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		},
+		"LS_adls2_innovantracrm_storage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://innovantracrm.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "quipersoft-adf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_ADB_quipersoft_workspace_accessToken": {
+						"value": "[parameters('LS_ADB_quipersoft_workspace_accessToken')]"
+					},
+					"LS_SQLDB_quipersoft_source_password": {
+						"value": "[parameters('LS_SQLDB_quipersoft_source_password')]"
+					},
+					"LS_SQLDB_quipersoftdb_target_password": {
+						"value": "[parameters('LS_SQLDB_quipersoftdb_target_password')]"
+					},
+					"LS_adls2_innovantracrm_storage_accountKey": {
+						"value": "[parameters('LS_adls2_innovantracrm_storage_accountKey')]"
+					},
+					"LS_ADB_quipersoft_workspace_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('LS_ADB_quipersoft_workspace_properties_typeProperties_existingClusterId')]"
+					},
+					"LS_SQLDB_quipersoft_source_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLDB_quipersoft_source_properties_typeProperties_server')]"
+					},
+					"LS_SQLDB_quipersoft_source_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLDB_quipersoft_source_properties_typeProperties_database')]"
+					},
+					"LS_SQLDB_quipersoft_source_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLDB_quipersoft_source_properties_typeProperties_userName')]"
+					},
+					"LS_SQLDB_quipersoftdb_target_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLDB_quipersoftdb_target_properties_typeProperties_server')]"
+					},
+					"LS_SQLDB_quipersoftdb_target_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLDB_quipersoftdb_target_properties_typeProperties_database')]"
+					},
+					"LS_SQLDB_quipersoftdb_target_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLDB_quipersoftdb_target_properties_typeProperties_userName')]"
+					},
+					"LS_adls2_innovantracrm_storage_properties_typeProperties_url": {
+						"value": "[parameters('LS_adls2_innovantracrm_storage_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "quipersoft-adf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'quipersoft-adf_ArmTemplate_0')]"
+			]
+		}
+	]
+}
